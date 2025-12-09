@@ -1,10 +1,17 @@
-import java.util.Scanner;
+/* Creare una sottoclasse di Scatola di nome ScatolaPeso aggiungendo il peso 
+(int) con relativi metodi set e get, 
+quindi creare un sorgente che utilizzi oggetti di entrambe le classi.
+2.Creare una sottoclasse di ScatolaPeso di nome 
+ScatolaColore aggiungendo il colore (String) 
+con relativi metodi set e get, quindi creare un’ applicazione
+ java che utilizzi oggetti di entrambe le classi.  */
+
+import java.util.*;
 
 public class Main {
     
     public static void main(String[] args) {
-		
-        Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
         Utils utils = new Utils();
         double[] arrBoxes = new double[4];
 		boolean run = true;
@@ -53,8 +60,17 @@ public class Main {
 						System.out.println("|________________________________________________________|");
 						double depth = input.nextDouble();
 
-						
+						/*
+						-nel main creare un arraylist di scatole
+						-aggiungere 3 scatole
+						-verificare quante scatole ci sono nell'arraylist
+						-stampare le scatole
+						-modificare l'altezza di tutte le scatole a 7
+						*/
 						Box box = new Box(height, length, depth);
+						BoxWeight boxWeight = new BoxWeight(0, 0, 0, 0);
+						BoxColor boxcolor = new BoxColor(0, 0, 0, 0, null);
+        
 						
 						arrBoxes[i] = box.calculateVolume(height, length, depth);
 					}
@@ -121,6 +137,43 @@ public class Main {
 					if(data == 2){
 						run = false;
 					};
+					break;
+				case 3:
+											/*
+						-nel main creare un arraylist di scatole
+						-aggiungere 3 scatole
+						-verificare quante scatole ci sono nell'arraylist
+						-stampare le scatole
+						-modificare l'altezza di tutte le scatole a 7
+						*/
+
+
+						ArrayList<Box> newArrayBoxes = new ArrayList<Box>();
+						newArrayBoxes.add(new Box(1,2,3));
+						newArrayBoxes.add(new Box(4,5,6));
+						newArrayBoxes.add(new Box(7,8,9));
+						newArrayBoxes.add(new BoxWeight(20, 30, 40, 15));
+						newArrayBoxes.add(new BoxColor(5, 11, 22, 21, "rosso"));
+
+						System.out.println("Dimension ArrayList: "+newArrayBoxes.size());
+						for(Box i : newArrayBoxes){
+							System.out.println(i);
+						}
+						System.out.println("_________________________________________________________");
+						System.out.println("|                                                        |");   
+						System.out.println("|                                                        |");
+						System.out.println("|            Vuoi eseguire un nuovo programma?           |");
+						System.out.println("|                                                        |");
+						System.out.println("|                     1. Si                              |");
+						System.out.println("|                     2. No                              |");
+						System.out.println("|                                                        |");
+						System.out.println("|________________________________________________________|");
+						data = input.nextInt();
+						if(data == 2){
+							run = false;
+						};
+
+
 					break;
 				default:
 					run = false;

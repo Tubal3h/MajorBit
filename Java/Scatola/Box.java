@@ -41,6 +41,10 @@ class Box {
 	public double sumBoxSizes(double height, double length, double depth){
 		return getDepth() + getLength() + getDepth();
 	}
+
+    public String toString(){
+        return "Altezza: "+ height + ", Lunghezza: " + length + ", Profondità: " + depth;
+    }
 	
 }
 

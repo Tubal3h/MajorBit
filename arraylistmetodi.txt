@@ -1,0 +1,61 @@
+// Demonstrate ArrayList 
+import java.util.*;
+ 
+class ArrayListdemoBis {
+  public static void main(String args[]) {
+    // create an array list
+    ArrayList<String> al = new ArrayList<String>();
+	System.out.println("*******************\n");
+    System.out.println("Grandezza iniziale di al: " +
+                       al.size());
+ 
+    // add elements to the array list
+    al.add("ciao");
+    al.add("a");
+    al.add("tutti");
+    al.add("buongiorno");
+    al.add("domani");
+    al.add("ci");
+	al.add("vediamo");
+    al.add(1, "A2");
+ 
+	// stampa grandezza di al
+	System.out.println("*******************");
+    System.out.println("Grandezza di al dopo l'aggiunta: " +
+                       al.size());
+	// display the array list
+	System.out.println("*******************");
+    System.out.println("Contenuto di al: " + al);
+	//stampa di al con for each
+	System.out.println("*******************");
+	System.out.println("stampo con il for-each");
+    for(String a : al ){ //Tipo di dato (String), nome variabile (a), collezione (al)
+		System.out.println(a);
+	}
+
+	// rimuovo elemento da ArrayList
+	System.out.println("*******************\n" + "rimuovo un elemento da al");    
+    al.remove(2);
+    System.out.println("Grandezza di al dopo la rimozione: " +
+                       al.size());
+    System.out.println("*******************");
+	System.out.println("contenuto di al: " + al);// to string - ridefinito nella classe arraylist
+ 
+ 
+	// Iterator versione 1
+	System.out.println("*******************");
+	System.out.println("\nElementi nell'Arraylist tramite Iterator1:");
+    Iterator<String> aItr=al.iterator();
+	while(aItr.hasNext())
+	   System.out.print(aItr.next()+" ");
+    System.out.println();
+	//iterator versione 2
+	System.out.println("*******************");
+	System.out.println("\nElementi nell'Arraylist tramite Iterator2:");
+	Iterator i;
+	for(i= al.iterator(); i.hasNext();){
+	  System.out.println( i.next());
+  }
+ 
+	}
+}
