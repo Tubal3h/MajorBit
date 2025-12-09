@@ -113,6 +113,34 @@ public class Utils {
 		}
 		return arr;
 	}
+    public String[] listCantanti(Canzone[] arrCanzoni) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'listCantanti'");
+    }
+    public void listSongs(Canzone[] arrCanzoni) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'listSongs'");
+    }
+    public Object mediaCanzone(Canzone[] arrCanzoni) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'mediaCanzone'");
+    }
+    public int qtSingerSongs(String string, Canzone[] arrCanzoni) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'qtSingerSongs'");
+    }
+    public Canzone[] singerSongs(String string, Canzone[] arrCanzoni) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'singerSongs'");
+    }
+    public String greaterVolume(double[] arrBoxes) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'greaterVolume'");
+    }
+    public String getData() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getData'");
+    }
 }
 
 

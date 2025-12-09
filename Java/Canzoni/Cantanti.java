@@ -1,7 +1,7 @@
 class Cantanti {
 	
-	private Canzone[] arrCanzone;
-	private int listSong;
+	// private Canzone[] arrCanzone;
+	// private int listSong;
 	private String nome;
 	
 	public Cantanti(String nome){

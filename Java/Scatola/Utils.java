@@ -36,7 +36,7 @@ public class Utils {
 	}
 	
 	public int getData(){
-		return this.data = data;
+		return this.data;
 	}
 	
 }

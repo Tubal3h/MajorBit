@@ -1,12 +1,7 @@
-/* Creare una sottoclasse di Scatola di nome ScatolaPeso aggiungendo il peso 
-(int) con relativi metodi set e get, 
-quindi creare un sorgente che utilizzi oggetti di entrambe le classi.
-2.Creare una sottoclasse di ScatolaPeso di nome 
-ScatolaColore aggiungendo il colore (String) 
-con relativi metodi set e get, quindi creare un’ applicazione
- java che utilizzi oggetti di entrambe le classi.  */
-
-import java.util.*;
+//serve per importare tutte le classi di utils
+// import java.util.*;
+import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     
@@ -26,7 +21,7 @@ public class Main {
 			System.out.println("|                                                        |");
 			System.out.println("|                     1. Box con Volume maggiore.        |");
 			System.out.println("|                     2. Somma misure delle box.         |");
-			//System.out.println("|                     3. Factorial                       |");
+			System.out.println("|                     3. ArrayList.                      |");
 			//System.out.println("|                     4. Duplicate                       |");
 			//System.out.println("|                     5. Trova numero                    |");
 			//System.out.println("|                     6. Trova carattere                 |");
@@ -139,41 +134,31 @@ public class Main {
 					};
 					break;
 				case 3:
-											/*
-						-nel main creare un arraylist di scatole
-						-aggiungere 3 scatole
-						-verificare quante scatole ci sono nell'arraylist
-						-stampare le scatole
-						-modificare l'altezza di tutte le scatole a 7
-						*/
-
-
-						ArrayList<Box> newArrayBoxes = new ArrayList<Box>();
-						newArrayBoxes.add(new Box(1,2,3));
-						newArrayBoxes.add(new Box(4,5,6));
-						newArrayBoxes.add(new Box(7,8,9));
-						newArrayBoxes.add(new BoxWeight(20, 30, 40, 15));
-						newArrayBoxes.add(new BoxColor(5, 11, 22, 21, "rosso"));
-
-						System.out.println("Dimension ArrayList: "+newArrayBoxes.size());
-						for(Box i : newArrayBoxes){
-							System.out.println(i);
-						}
-						System.out.println("_________________________________________________________");
-						System.out.println("|                                                        |");   
-						System.out.println("|                                                        |");
-						System.out.println("|            Vuoi eseguire un nuovo programma?           |");
-						System.out.println("|                                                        |");
-						System.out.println("|                     1. Si                              |");
-						System.out.println("|                     2. No                              |");
-						System.out.println("|                                                        |");
-						System.out.println("|________________________________________________________|");
-						data = input.nextInt();
-						if(data == 2){
-							run = false;
-						};
-
-
+					ArrayList<Box> newArrayBoxes = new ArrayList<Box>();
+					newArrayBoxes.add(new Box(1,2,3));
+					newArrayBoxes.add(new Box(4,5,6));
+					newArrayBoxes.add(new Box(7,8,9));
+					newArrayBoxes.add(new BoxWeight(20, 30, 40, 15));
+					newArrayBoxes.add(new BoxColor(5, 11, 22, 21, "rosso"));
+					System.out.println();
+					System.out.println("Dimension ArrayList: "+ newArrayBoxes.size());
+					for(Box i : newArrayBoxes){
+						System.out.println(i);
+					}
+					System.out.println();
+					System.out.println("_________________________________________________________");
+					System.out.println("|                                                        |");   
+					System.out.println("|                                                        |");
+					System.out.println("|            Vuoi eseguire un nuovo programma?           |");
+					System.out.println("|                                                        |");
+					System.out.println("|                     1. Si                              |");
+					System.out.println("|                     2. No                              |");
+					System.out.println("|                                                        |");
+					System.out.println("|________________________________________________________|");
+					data = input.nextInt();
+					if(data == 2){
+						run = false;
+					};
 					break;
 				default:
 					run = false;
@@ -184,7 +169,3 @@ public class Main {
         input.close();
     }
 }
-
-
-//Data la classe Scatola creare un’ applicazione java che istanzi 4 oggetti 
-//di tipo Scatola e che visualizzi il volume maggiore. (metodo da inserire in utile)

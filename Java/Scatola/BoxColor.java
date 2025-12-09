@@ -15,6 +15,6 @@ public class BoxColor extends BoxWeight {
     }
 
     public String toString(){
-        return "Altezza: "+ getHeight() + ", Lunghezza: " + getLength() + ", Profondità: " + getDepth() + ", Peso: " + getWeight();
+        return "Altezza: "+ getHeight() + ", Lunghezza: " + getLength() + ", Profondità: " + getDepth() + ", Peso: " + getWeight() + " e colore: " + color;
     }
 }

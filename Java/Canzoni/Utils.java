@@ -78,16 +78,6 @@ class Utils {
 		return cantanti;
 	}
 
-	public int qtSingerSongs(String nome, Canzone[] arrCanzone) {
-		int qt = 0;
-		for(int i=0; i<arrCanzone.length; i++){
-			if(arrCanzone[i].getCantante().equals(nome)){
-				qt++;
-			}
-		}
-		return qt;
-	}
-
 	public Canzone[] singerSongs(String nome,Canzone[] arrCanzone) {
 		Canzone[] arr = new Canzone[qtSingerSongs(nome,arrCanzone)];
 		int qt = 0;
@@ -98,6 +88,16 @@ class Utils {
 			}
 		}
 		return arr;
+	}
+
+	public int qtSingerSongs(String nome, Canzone[] arrCanzone) {
+		int qt = 0;
+		for(int i=0; i<arrCanzone.length; i++){
+			if(arrCanzone[i].getCantante().equals(nome)){
+				qt++;
+			}
+		}
+		return qt;
 	}
 
 	public CasaProd[] fullAlbum(Canzone[] arrCanzone, CdMusicale cdMusicale) {	
