@@ -71,6 +71,19 @@ public class Studente extends Persona{
     }
 
     public void getAllData() {
+        int n = 0;
+        if(this.physics <= 5){
+            n++;
+        }
+        if(this.math <= 5){
+            n++;
+        }
+        if(this.informatic <= 5){
+            n++;
+        }
+        if(this.story <= 5){
+            n++;
+        }
         String bordo = "+--------------------------------------------------+";
         
         // Intestazione con Nome e Cognome in Maiuscolo
@@ -91,10 +104,14 @@ public class Studente extends Persona{
         System.out.printf("| %-20s %5.1f                      |\n", "- Matematica", this.math);
         System.out.printf("| %-20s %5.1f                      |\n", "- Informatica", this.informatic);
         System.out.printf("| %-20s %5.1f                      |\n", "- Storia", this.story);
+        System.out.printf("| %-20s %5d                      |\n", "- N. insufficienze", n);
+
         
         // Sezione Media Finale
         System.out.println("|                                                  |");
-        System.out.printf("| %-20s %5.2f                      |\n", "MEDIA FINALE:", getAverage());
+        System.out.printf("| %-20s %5.1f                      |\n", "MEDIA FINALE:", getAverage());
         System.out.println(bordo + "\n");
     }
+
+
 }

@@ -80,6 +80,7 @@ public class Main {
 						System.out.println("|              2) No                                     |");
 						System.out.println("|________________________________________________________|");
 						data = scanner.nextInt();
+						Utils.clearConsole();
 						if(data == 1){
 							for(Studente i : arrStudents){
 								System.out.println(i);
@@ -93,12 +94,11 @@ public class Main {
 					if(Utils.lowGradeStudentes(arrListStudents) != null){
 						System.out.println("_________________________________________________________");
 						System.out.println("|                                                        |");
-						if(Utils.lowGradeStudentes(arrListStudents).size() > 1){
+						if(Utils.lowGradeStudentes(arrListStudents).size() >= 1){
 							System.out.println("|              Studente con la media piu bassa:          |");
 						}else{
 							System.out.println("|              Studenti con la media piu bassa:          |");
 						}
-						System.out.println("|              Studenti con la media piu bassa:          |");
 						System.out.println("|________________________________________________________|");
 						for(Studente i : Utils.lowGradeStudentes(arrListStudents)){
 							i.getAllData();
@@ -106,7 +106,11 @@ public class Main {
 					}else{
 						System.out.println("Nessuno studente trovato o lista vuota.");
 					}
-
+					System.out.println("_________________________________________________________");
+					System.out.println("|                                                        |");
+					System.out.println("|              Numero insufficienze per materia:         |");
+					System.out.println("|________________________________________________________|");
+					Utils.countLowGrades(arrListStudents);
 					System.out.println("_________________________________________________________");
 					System.out.println("|                                                        |");
 					System.out.println("|            Vuoi eseguire un nuovo programma?           |");
@@ -117,6 +121,12 @@ public class Main {
 					System.out.println("|________________________________________________________|");
 					data = scanner.nextInt();
 					if(data == 2){
+						Utils.clearConsole();
+						//console
+						System.out.println("_________________________________________________________");
+						System.out.println("|                                                        |");
+						System.out.println("|                   Programma Chiuso.                    |");
+						System.out.println("|________________________________________________________|");
 						run = false;
 					};
                     break;

@@ -42,5 +42,39 @@ public class Utils {
         }
     }
 
+    public static void countLowGrades(ArrayList<Studente> arr){
+        int physics = 0;
+        int math = 0;
+        int informatic = 0;
+        int story = 0;
+        for(Studente s : arr){
+            if(s.getPhysics() <= 5){
+                physics++;
+            }
+            if(s.getMath() <= 5){
+                math++;
+            }
+            if(s.getInformatic() <= 5){
+                informatic++;
+            }
+            if(s.getStory() <= 5){
+                story++;
+            }
+        }
+        if(physics > 0){
+            System.out.println("Fisica: " + physics);
+        }
+        if(math > 0){
+            System.out.println("Matematica: " + math);
+        }
+        if(informatic > 0){
+            System.out.println("Informatica: " + informatic);
+        }
+        if(story > 0){
+            System.out.println("Storia: " + story);
+        }
+        
+    }
+
 
 }
