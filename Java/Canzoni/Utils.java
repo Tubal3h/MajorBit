@@ -1,5 +1,34 @@
 class Utils {
-	
+	//
+	public static void clearConsole() {
+
+        try {
+            String os = System.getProperty("os.name").toLowerCase();
+            if (os.contains("win")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
+            }
+        } catch (Exception e) {
+            System.out.println("Impossibile pulire la console");
+        }
+    }
+	//____
+
+	public void listSongs(Canzone[] arr) {
+		System.out.println("_________________________________________________________");
+		System.out.println("|                                                        |");
+		System.out.println("|                     Lista canzoni:                     |");
+		System.out.println("|________________________________________________________|");
+		for(int i=0; i<arr.length; i++) {
+			System.out.println("________________________________________________________");
+			System.out.println("|      Nome:"+arr[i].getCantante());
+			System.out.println("|      Titolo:"+arr[i].getCantante());
+			System.out.println("|      Durata:"+arr[i].getDurata());
+			System.out.println("|________________________________________________________");
+		}
+	}
+
 	public float mediaCanzone(Canzone[] arr){
 		double sum = 0;
 		for(int i=0; i<arr.length; i++){
