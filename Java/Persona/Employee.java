@@ -64,7 +64,8 @@ public class Employee extends Persona{
     public void setIdEmployee(int idEmployee) {
         this.idEmployee = idEmployee;
     }
-
+    
+    @Override
     public String toString() {
         return "\n+======================================+\n" + 
             "|  Impiegato                             \n" +

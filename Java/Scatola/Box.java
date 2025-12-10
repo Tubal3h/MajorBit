@@ -42,6 +42,7 @@ class Box {
 		return getDepth() + getLength() + getDepth();
 	}
 
+    @Override
     public String toString(){
         return "Altezza: "+ height + ", Lunghezza: " + length + ", Profondità: " + depth;
     }

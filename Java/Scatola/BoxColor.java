@@ -13,7 +13,8 @@ public class BoxColor extends BoxWeight {
     public void setColor(String color){
         this.color = color;
     }
-
+    
+    @Override
     public String toString(){
         return "Altezza: "+ getHeight() + ", Lunghezza: " + getLength() + ", Profondità: " + getDepth() + ", Peso: " + getWeight() + " e colore: " + color;
     }

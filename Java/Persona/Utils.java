@@ -17,7 +17,9 @@ public class Utils {
             System.out.println("Impossibile pulire la console");
         }
     }
-	//____
+	//___________________________________
+
+
 
     public static ArrayList<Studente> lowGradeStudentes(ArrayList<Studente> arr){
         if(arr == null || arr.size() == 0){
@@ -83,4 +85,36 @@ public class Utils {
     // public static double  calcSalary(Sellers sellers){
     //     return (sellers.getSalary() + sellers.getCommissions());
     // }
+
+//     public static ArrayList<Studente> lowGradeStudentes(ArrayList<Studente> arr){
+//     try {
+//         if(arr == null || arr.size() == 0){
+//             System.out.println("Zero studenti inseriti");
+//             return null;
+//         }else{
+//             ArrayList<Studente> student = new ArrayList<Studente>(1);
+//             student.add(arr.get(0));        
+//             if(arr.size() > 1){
+//                 for(int i=1; i<arr.size(); i++){
+//                     if(arr.get(i).getAverage() <= student.get(0).getAverage()){
+//                         if(arr.get(i).getAverage() < student.get(0).getAverage()){
+//                             student.clear();
+//                             student.add(arr.get(i));
+//                         }else{
+//                             student.add(arr.get(i));
+//                         }
+//                     }
+//                 }
+//             }
+//             return student;
+//         }
+//     } catch (IndexOutOfBoundsException e) {
+//         System.out.println("Errore: indice fuori dai limiti dell'array");
+//         return null;
+//     } catch (NullPointerException e) {
+//         System.out.println("Errore: oggetto Studente null");
+//         return null;
+//     }
+// }
+
 }

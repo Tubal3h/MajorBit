@@ -13,7 +13,8 @@ public class BoxWeight extends Box{
     public void setWeight(int weight){
         this.weight = weight;
     }
-
+    
+    @Override
     public String toString(){
         return "Altezza: "+ getHeight() + ", Lunghezza: " + getLength() + ", Profondità: " + getDepth() + ", Peso: " + weight;
     }
