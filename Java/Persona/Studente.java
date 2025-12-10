@@ -1,4 +1,4 @@
-package Persona;
+
 
 public class Studente extends Persona{
     double physics;

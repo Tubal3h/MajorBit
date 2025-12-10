@@ -1,4 +1,4 @@
-package Persona;
+
 
 import java.util.ArrayList;
 
@@ -76,5 +76,11 @@ public class Utils {
         
     }
 
+    // public static double  calcSalary(Employee employee){
+    //     return (employee.getSalary() + employee.getBonus());
+    // }
 
+    // public static double  calcSalary(Sellers sellers){
+    //     return (sellers.getSalary() + sellers.getCommissions());
+    // }
 }
