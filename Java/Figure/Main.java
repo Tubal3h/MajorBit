@@ -21,8 +21,19 @@ public class Main{
         System.out.println("|________________________________________________________|");
 
         
-        // System.out.println("Rettangolo" + Utils.calcAreaRectangle(arrayList.get(0).getBase(), arrayList.get(0).getHeight()));
-		// System.out.println("Triangolo" + Utils.calcAreaRectangle(arrayList.get(1).getBase(), arrayList.get(1).getHeight()));
+        System.out.println(
+            "Rettangolo" 
+            + 
+            Utils.calcAreaRectangle(
+                arrayList
+                .get(0)
+                .getBase(),
+                arrayList
+                .get(0)
+                .getHeight()
+            )
+        );
+		System.out.println("Triangolo" + Utils.calcAreaRectangle(arrayList.get(1).getBase(), arrayList.get(1).getHeight()));
         // // Utils.calcAreaRectangle(arrayList.get(0).getBase(), arrayList.get(0).getHeight());
         System.out.println("Rettangolo: " + Utils.calcAreaRectangle(arrayList.get(0)));
         System.out.println("Triangolo: " + Utils.calcAreaTriangle(arrayList.get(1)));

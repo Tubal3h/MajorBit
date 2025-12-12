@@ -1,0 +1,69 @@
+//un file
+public class MiaEcceProva extends Exception  {
+
+	   private String art;   
+
+	   MiaEcceProva(String art){				    								
+
+	   this.art=art; 							
+
+	   } 
+
+	   public String toString(){
+
+	   	  return "Ordinare l'articolo " +art;
+
+	 }; 
+//un file
+public class MainMiaEcceProva{
+ 
+	public static void main(String[] args) {
+
+		 Magazzino m= new Magazzino (); 
+
+		try{
+
+		m.vendita("a001", 2);
+
+		System.out.println("vendita effettuata" + "a001");  		 
+
+		}catch (MiaEcceProva e){
+
+		 System.out.println("Attenzione: " + e);   
+
+		}try{
+
+		 m.vendita("a002",12);		  
+
+		System.out.println("vendita effettuata" + "a002");  		     
+
+		}catch (MiaEcceProva e) {   
+
+		  System.out.println("Attenzione: " + e);      
+
+		}
+
+	}
+
+}	
+//un file
+public class Magazzino{
+ 
+	public void vendita(String codice,int qta_ven) throws MiaEcceProva {
+
+	      int giac=10;
+
+		  giac=giac-qta_ven;
+
+	     if(giac <= 0)
+
+		    throw new MiaEcceProva(codice);       
+
+	   }	 
+
+}	   
+ 
+ 
+}
+
+ 
