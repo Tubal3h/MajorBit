@@ -1,0 +1,6 @@
+4) Creare una classe chiamata Polizza_base le cui variabili d’istanza sono la targa del veicolo(String) e il valore assicurato,chiamato RC (long), i metodi get e set e un metodo che calcola il premio annuale pari ad 1/100 del valore assicurato. 
+ 
+Scrivere poi una classe derivata chiamata PolizzaIncendioFurto che aggiunge il valore dell’incendio e furto e che ha un premio annuale che si calcola come 1/100 della somma del valore RC+valore incendio e furto.  
+ 
+Utilizzando la classe PolizzaBase, scrivere una classe AgenziaAssicurativa che abbia come variabili d’istanza il nome dell’Agenzia e un elenco(array) di polizze auto il cui numero deve essere impostato dal costruttore della classe. Inoltre definire i metodi: - metodo che aggiunge una polizza; - metodo che restituisce la somma dei premi annui di tutte le polizze dell’ agenzia. - metodo che restituisce l’elenco dei valori RC di tutte le polizze dell’ agenzia. - metodo che cancella una polizza dell’agenzia assicurativa. e definire eventuali classi di Eccezioni. Quindi costruire un main e provare i vari metodi. 
+ 
