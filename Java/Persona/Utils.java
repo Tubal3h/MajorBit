@@ -116,5 +116,65 @@ public class Utils {
 //         return null;
 //     }
 // }
+    public static String subjectSelected(int subject){
+        String subjectString = "";
+        if(subject == 1){
+            subjectString = "Fisica";
+        }else if(subject == 2){
+            subjectString = "Matematica";
+        }else if(subject == 3){
+            subjectString = "Informatica";
+        }else if(subject == 4){
+            subjectString = "Storia";
+        }
+        return subjectString;
+    }
 
+    public static boolean votoCheck(ArrayList<Studente> arr,int index,int subject,int data) throws ErrorCatch{
+        boolean run = true;
+        if(data >= 0 && data <= 10){
+            switch (subject) {
+                case 1:
+                    arr.get(index).setPhysics(data);
+                    break;
+                case 2:
+                    arr.get(index).setMath(data);
+                    break;
+                case 3:
+                    arr.get(index).setInformatic(data);;
+                    break;
+                case 4:
+                    arr.get(index).setStory(data);
+                    break;
+            
+                default:
+                    break;
+            }
+            run = false;
+            return run;
+        }else{
+            throw new ErrorCatch();
+        }
+    }
+
+    public static void getDataModified(ArrayList<Studente> arr, int index, int subject){
+        switch (subject) {
+            case 1:
+                System.out.println("|                 "+subjectSelected(subject)+": "+ arr.get(index).getPhysics() );
+                break;
+            case 2:
+                System.out.println("|                 "+subjectSelected(subject)+": "+ arr.get(index).getMath() );
+                break;
+            case 3:
+                System.out.println("|                 "+subjectSelected(subject)+": "+ arr.get(index).getInformatic() );
+                break;
+            case 4:
+                System.out.println("|                 "+subjectSelected(subject)+": "+ arr.get(index).getStory() );
+                break;
+        
+            default:
+                break;
+        }
+    }
 }
+

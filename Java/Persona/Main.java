@@ -121,7 +121,7 @@ public class Main {
 			System.out.println("|                                                        |");
 			System.out.println("|                     1.Studente media voti.             |");
 			System.out.println("|                     2.Stipendi.                        |");
-			// System.out.println("|                     3. Mostra lista cantanti.          |");
+			System.out.println("|                     3. Cambio voto studente.          |");
 			// System.out.println("|                     4. Mostra gli album.               |");
 			//System.out.println("|                     5.                     |");
 			//System.out.println("|                     6.                  |");
@@ -256,6 +256,105 @@ public class Main {
 						run = false;
 					};
                     break;
+				case 3:
+					int index = 0;
+					int menu = 0;
+					int subject = 0;
+					while(run){
+
+						Utils.clearConsole();
+						if(menu <1 && menu  > 3 ){
+							System.out.println("Comando non valido.");
+						}
+						System.out.println("_________________________________________________________");
+						System.out.println("|                                                        |");
+						System.out.println("|              Vuoi modificare il voto di:               |");
+						System.out.println("+---------------------------------------------------------");
+						System.out.println("|                 Nome: "+ arrListStudents.get(index).getName() );
+						System.out.println("|                 Cognome: "+ arrListStudents.get(index).getSurname() );
+						System.out.println("|                 Fisica: "+ arrListStudents.get(index).getPhysics() );
+						System.out.println("|                 Matematica: "+ arrListStudents.get(index).getMath() );
+						System.out.println("|                 Informatica: "+ arrListStudents.get(index).getInformatic() );
+						System.out.println("|                 Storia: "+ arrListStudents.get(index).getStory() );
+						System.out.println("+---------------------------------------------------------");
+						System.out.println("|              1) Successivo                             |");
+						if(index <= 0){
+							System.out.println("|                                                        |");
+						}else{
+							System.out.println("|              2) Indietro                               |");
+						}
+						System.out.println("|              3) Si                                     |");
+						System.out.println("|________________________________________________________|");
+						menu = scanner.nextInt();
+						
+						if(menu == 1){
+							index++;
+						}else if(menu == 2){
+							index--;
+						}else if(menu == 3){
+							run = false;
+						}
+						
+					}
+					run = true;
+					while(run){
+						System.out.println("_________________________________________________________");
+						System.out.println("|                                                        |");
+						System.out.println("|                     Scegli la materia:                 |");
+						System.out.println("|                                                        |");
+						System.out.println("|                     1. Fisica                          |");
+						System.out.println("|                     2. Matematica                      |");
+						System.out.println("|                     3. Informatica                     |");
+						System.out.println("|                     4. Storia                          |");
+						System.out.println("|                                                        |");
+						System.out.println("|________________________________________________________|");
+						subject = scanner.nextInt();
+						if(subject >= 1 && subject <= 4){
+							run = false;
+						}
+					}
+					run = true;
+					while (run) {
+						System.out.println("+----------------------------------------------------");
+						System.out.println("|     Inserisci il nuovo voto di "+ Utils.subjectSelected(subject)+": ");
+						System.out.println("+----------------------------------------------------");
+						data = scanner.nextInt();
+						try {
+							run = Utils.votoCheck(arrListStudents, index, subject, data);
+						} catch (ErrorCatch e) {
+							System.err.println(e);
+						}
+					}
+
+					System.out.println("+---------------------------------------------------------");
+					System.out.println("|                 Nome: "+ arrListStudents.get(index).getName() );
+					System.out.println("|                 Cognome: "+ arrListStudents.get(index).getSurname() );
+					Utils.getDataModified(arrListStudents, index, subject);
+					System.out.println("+---------------------------------------------------------");
+
+					run = true;
+					System.out.println("");
+					System.out.println("");
+					System.out.println("");
+					System.out.println("_________________________________________________________");
+					System.out.println("|                                                        |");
+					System.out.println("|            Vuoi eseguire un nuovo programma?           |");
+					System.out.println("|                                                        |");
+					System.out.println("|                     1. Si                              |");
+					System.out.println("|                     2. No                              |");
+					System.out.println("|                                                        |");
+					System.out.println("|________________________________________________________|");
+					data = scanner.nextInt();
+					if(data == 2){
+						Utils.clearConsole();
+						//console
+						System.out.println("_________________________________________________________");
+						System.out.println("|                                                        |");
+						System.out.println("|                   Programma Chiuso.                    |");
+						System.out.println("|________________________________________________________|");
+						run = false;
+					};
+					break;
                 case 00:
 					//pulisce la console fornito da AI
 					Utils.clearConsole();
